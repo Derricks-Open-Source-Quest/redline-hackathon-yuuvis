@@ -4,7 +4,7 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='../templates/public')
 app.config.from_object(Config)
 Bootstrap(app)
 db = SQLAlchemy(app)
